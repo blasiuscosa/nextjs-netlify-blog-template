@@ -4,6 +4,10 @@ backend:
 media_folder: public/images
 public_folder: /images
 publish_mode: editorial_workflow
+i18n:
+  structure: multiple_folders
+  locales: [en, zh]
+  default_locale: en
 
 collections:
   - name: "config"
@@ -139,3 +143,64 @@ collections:
       - label: "Body"
         name: "body"
         widget: "markdown"
+
+  - name: "jobs"
+    label: "Opening Jobs"
+    folder: "content/jobs/"
+    extension: "mdx"
+    format: "frontmatter"
+    create: true
+    i18n: true
+    slug: "{{slug}}"
+    identifier_field: slug
+    summary: "{{title}}"
+    fields:
+      - label: "Slug"
+        name: "slug"
+        widget: "string"
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        i18n: true
+      - label: "Opening Date"
+        name: "opening_date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        dateFormat: "YYYY-MM-DD"
+        timeFormat: false
+      - label: "Expiry Date"
+        name: "expiry_date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        dateFormat: "YYYY-MM-DD"
+        timeFormat: false
+      - label: Author
+        name: "author"
+        widget: relation
+        collection: "meta"
+        file: "authors"
+        searchFields:
+          - "authors.*.name"
+        displayFields:
+          - "authors.*.name"
+        valueField: "authors.*.slug"
+      - label: Tags
+        label_singular: "Tag"
+        name: "tags"
+        widget: list
+        summary: "{{fields.tag}}"
+        field:
+          label: Tag
+          name: tag
+          widget: relation
+          collection: "meta"
+          file: "tags"
+          searchFields:
+            - "tags.*.name"
+          displayFields:
+            - "tags.*.name"
+          valueField: "tags.*.slug"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        i18n: true
