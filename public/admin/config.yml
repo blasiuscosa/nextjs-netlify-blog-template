@@ -4,7 +4,7 @@ backend:
 media_folder: public/images
 public_folder: /images
 publish_mode: editorial_workflow
-logo_url: https://vlogic.digit-sense.com/images/vlogic-logo.png
+logo_url: https://vlogic.digit-sense.com/images/logo.svg
 
 i18n:
   structure: multiple_folders
