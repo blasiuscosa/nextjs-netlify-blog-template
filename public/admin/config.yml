@@ -145,7 +145,6 @@ collections:
           display_fields:
             - "tags.*.name"
           value_field: "tags.*.slug"
-        i18n: duplicate
       - label: "Body"
         name: "body"
         widget: "markdown"
@@ -210,7 +209,6 @@ collections:
           display_fields:
             - "tags.*.name"
           value_field: "tags.*.slug"
-        i18n: duplicate
       - label: "Body"
         name: "body"
         widget: "markdown"
