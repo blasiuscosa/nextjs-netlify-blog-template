@@ -4,6 +4,7 @@ backend:
 media_folder: public/images
 public_folder: /images
 publish_mode: editorial_workflow
+logo: /public/images/logo.svg
 i18n:
   structure: multiple_folders
   locales: [en, zh]
