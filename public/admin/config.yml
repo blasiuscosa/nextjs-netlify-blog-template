@@ -4,6 +4,7 @@ backend:
 media_folder: public/images
 public_folder: /images
 publish_mode: editorial_workflow
+logo_url: https://vlogic.digit-sense.com/images/vlogic-logo.png
 
 i18n:
   structure: multiple_folders
@@ -115,18 +116,18 @@ collections:
         name: "date"
         widget: "datetime"
         format: "YYYY-MM-DD"
-        dateFormat: "YYYY-MM-DD"
-        timeFormat: false
+        date_format: "YYYY-MM-DD"
+        time_format: false
       - label: Author
         name: "author"
         widget: relation
         collection: "meta"
         file: "authors"
-        searchFields:
+        search_fields:
           - "authors.*.name"
-        displayFields:
+        display_fields:
           - "authors.*.name"
-        valueField: "authors.*.slug"
+        value_field: "authors.*.slug"
       - label: Tags
         label_singular: "Tag"
         name: "tags"
@@ -138,18 +139,18 @@ collections:
           widget: relation
           collection: "meta"
           file: "tags"
-          searchFields:
+          search_fields:
             - "tags.*.name"
-          displayFields:
+          display_fields:
             - "tags.*.name"
-          valueField: "tags.*.slug"
+          value_field: "tags.*.slug"
       - label: "Body"
         name: "body"
         widget: "markdown"
         i18n: true
 
   - name: "jobs"
-    label: "Opening Jobs"
+    label: "Jobs Opening"
     folder: "content/jobs/"
     extension: "mdx"
     format: "frontmatter"
@@ -170,24 +171,24 @@ collections:
         name: "opening_date"
         widget: "datetime"
         format: "YYYY-MM-DD"
-        dateFormat: "YYYY-MM-DD"
-        timeFormat: false
+        date_format: "YYYY-MM-DD"
+        time_format: false
       - label: "Expiry Date"
         name: "expiry_date"
         widget: "datetime"
         format: "YYYY-MM-DD"
-        dateFormat: "YYYY-MM-DD"
-        timeFormat: false
+        date_format: "YYYY-MM-DD"
+        time_format: false
       - label: Author
         name: "author"
         widget: relation
         collection: "meta"
         file: "authors"
-        searchFields:
+        search_fields:
           - "authors.*.name"
-        displayFields:
+        display_fields:
           - "authors.*.name"
-        valueField: "authors.*.slug"
+        value_field: "authors.*.slug"
       - label: Tags
         label_singular: "Tag"
         name: "tags"
@@ -199,11 +200,11 @@ collections:
           widget: relation
           collection: "meta"
           file: "tags"
-          searchFields:
+          search_fields:
             - "tags.*.name"
-          displayFields:
+          display_fields:
             - "tags.*.name"
-          valueField: "tags.*.slug"
+          value_field: "tags.*.slug"
       - label: "Body"
         name: "body"
         widget: "markdown"
