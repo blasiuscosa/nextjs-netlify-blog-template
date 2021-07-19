@@ -3,6 +3,7 @@ import BasicMeta from "../components/meta/BasicMeta";
 import OpenGraphMeta from "../components/meta/OpenGraphMeta";
 import TwitterCardMeta from "../components/meta/TwitterCardMeta";
 import { SocialList } from "../components/SocialList";
+import styles from '../../public/styles/Home.module.css'
 
 export default function Index() {
   return (
@@ -10,13 +11,16 @@ export default function Index() {
       <BasicMeta url={"/"} />
       <OpenGraphMeta url={"/"} />
       <TwitterCardMeta url={"/"} />
-      <div className="container">
-        <div>
-          <h1>
-            Hi, We're Next.js Starter page<span className="fancy">.</span>
-          </h1>
-          <h2>A blog starter template with Next.js.</h2>
-          {/*<SocialList />*/}
+      <div id="home" className={styles.header_container}>
+        <div className={styles.opacity_view}>
+          <div className={styles.title_container}>
+            <h3>Headline</h3>
+            <h1>I Want What I Want<br/>When I Want It.</h1>
+            <div className={styles.remarks}>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <button className={styles.float_right}>Call To Action</button>
+          </div>
         </div>
       </div>
       <style jsx>{`
